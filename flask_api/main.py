@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import json
 
 
@@ -22,8 +22,8 @@ def hello_specific_user(userName):
 
 @app.route('/json')
 def json_dump():
-    return json.dumps({'name': 'david',
-                       'email': 'david@naver.com'})
+    return jsonify({'name': 'david',
+                    'email': 'david@naver.com'})
 
 
 if __name__ == "__main__":
